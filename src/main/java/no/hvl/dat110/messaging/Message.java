@@ -12,8 +12,17 @@ public class Message {
 		
 		// TODO - START
 		
-		if (true)
-			throw new UnsupportedOperationException(TODO.constructor("Message"));
+        if (data == null) {
+            throw new IllegalArgumentException("Message.java | Data can not be null!");
+        }
+
+        if (data.length > 127) {
+            throw new IllegalArgumentException("Message.java | Data can not be more than 127 bytes");
+        }
+
+		// if (true) throw new UnsupportedOperationException(TODO.constructor("Message"));
+        
+        this.data = data;
 			
 		// TODO - END
 	}
